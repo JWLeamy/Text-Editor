@@ -12,13 +12,13 @@ const initdb = async () =>
     },
   });
 
-// TODO: Add logic to a method that accepts some content and adds it to the database
-export const putDb = async (content) => {
+
+  export const putDb = async (content) => {
   
   console.log('Puts to the database');
 
 // Create a connection to the database database and version we want to use.
-const contactDb = await openDB('JATE', 1);
+const contactDb = await openDB('jate', 1);
 
 // Create a new transaction and specify the database and data privileges.
 const tx = contactDb.transaction('JATE', 'readwrite');
@@ -33,7 +33,6 @@ const request = store.add({ name: name, home_phone: home, cell_phone: cell, emai
 const result = await request;
 console.log('🚀 - data saved to the database', result);}
 
-// TODO: Add logic for a method that gets all the content from the database
 export const getDb = async () => {
   console.log('GET from the database');
 
