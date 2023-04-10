@@ -19,7 +19,7 @@ module.exports = () => {
     },
     plugins: [
       // Webpack plugin (line 1))
-      // Webpack plugin that generates our html file and injects our bundles.
+      // Webpack plugin that generates our html file and injects bundles.
       new HtmlWebpackPlugin({
         template: './index.html',
         title: 'JATE'
@@ -64,11 +64,13 @@ module.exports = () => {
             loader: 'babel-loader',
             options: {
               presets: ['@babel/preset-env'],
-              plugins: ['@babel/plugin-proposal-object-rest-spread', '@babel/transform-runtime'],
+              plugins: [
+                '@babel/plugin-proposal-object-rest-spread',
+                '@babel/transform-runtime',
+              ],
             },
           },
         },
-        
       ],
     },
   };
