@@ -10,6 +10,10 @@
 
 Your very own downloadable Text Editor. Use it to add, edit, manipulate text as you please.
 
+## Preview 
+
+![chrome-capture-2023-3-18](https://user-images.githubusercontent.com/111401066/232912299-6085d916-bf9e-4bfa-a1ab-195e0cbe72e4.gif)
+
 ## User Story
 
 ```
@@ -56,3 +60,15 @@ After cloning the repo to yur local text editor, download dependencies using ```
 Once installed, you can add and delete text to your liking. Nothing will be deleted unless you want it to, meaning you can close the app completely and your text will remain upon reopening it. 
 
 ## DEMO
+After starting up the application in your browser (localhost3000), click install to download the app to your personal device. 
+![Screen Shot 2023-04-18 at 2 45 07 PM](https://user-images.githubusercontent.com/111401066/232912715-5657b2f3-e35e-4bb5-b610-bbc5ce1f081c.png)
+<br />
+The following image shows the application's ```manifest.json``` file:
+<br />
+![Screen Shot 2023-04-18 at 2 38 57 PM](https://user-images.githubusercontent.com/111401066/232912555-68fe2502-26ec-4f98-9596-767799e70812.png)
+The following image shows the application's registered service worker:
+<br />
+![Screen Shot 2023-04-18 at 2 39 15 PM](https://user-images.githubusercontent.com/111401066/232912590-38ba34f4-e4cb-48cb-9bd2-65cfb0e33af2.png)
+The following image shows the application's IndexedDB storage:
+<br />
+![Screen Shot 2023-04-18 at 2 39 33 PM](https://user-images.githubusercontent.com/111401066/232912502-575300f5-a4b8-40fe-98fb-c83faa026f25.png)
