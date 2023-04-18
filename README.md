@@ -9,6 +9,8 @@
 ## Description
 
 Your very own downloadable Text Editor. Use it to add, edit, manipulate text as you please.
+<br />
+Visit the deployed application @ https://pwa-texteditor.herokuapp.com/
 
 ## Preview 
 
