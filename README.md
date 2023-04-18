@@ -2,13 +2,13 @@
 <h1 align="center"> Progressive Web Application (PWA) </h1>
   
 <p align="center">
-    <img src="https://img.shields.io/github/languages/top/jwLeamy/text-editor"  />
+    <img src="https://img.shields.io/github/languages/top/jwLeamy/text-editor" />
    
 </p>
 
 ## Description
 
-Your very own downloadable Text Editor. Use it to add, edit, manipulate text as you please
+Your very own downloadable Text Editor. Use it to add, edit, manipulate text as you please.
 
 ## User Story
 
@@ -49,9 +49,10 @@ THEN I should have proper build scripts for a webpack application
 ```
 
 ## Installation
-After cloning the repo to yur local text editor, download dependencies using npm i, and start up the application with npm start. Once opened on localhost:3000 in your browser, you will be able to download the app directly to your computer and enjoy its uses without needed a browser at all. 
+After cloning the repo to yur local text editor, download dependencies using ```npm i```, and start up the application with ```npm start```. Once opened on localhost:3000 in your browser, you will be able to download the app directly to your computer and enjoy its uses without needed a browser at all. 
 
   
 ## Usage
-Visit the deployed application and check out my projects.
+Once installed, you can add and delete text to your liking. Nothing will be deleted unless you want it to, meaning you can close the app completely and your text will remain upon reopening it. 
 
+## DEMO
