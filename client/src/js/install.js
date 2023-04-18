@@ -3,6 +3,7 @@ const butInstall = document.getElementById('buttonInstall');
 // Logic for installing the PWA
 
 window.addEventListener('beforeinstallprompt', (event) => {
+  event.preventDefault();
      // Store the triggered events
      window.deferredPrompt = event;
 
@@ -11,14 +12,13 @@ window.addEventListener('beforeinstallprompt', (event) => {
 });
 
 butInstall.addEventListener('click', async () => {
-    const promptEvent = window.deferredPrompt;
 
-  if (!promptEvent) {
+  if (!window.deferredPrompt) {
    return;
   }
 
   // Show prompt
-  promptEvent.prompt();
+  window.deferredPrompt.prompt();
   
   // Reset the deferred prompt variable, it can only be used once.
   window.deferredPrompt = null;

@@ -22,12 +22,14 @@ module.exports = () => {
       // Webpack plugin that generates our html file and injects bundles.
       new HtmlWebpackPlugin({
         template: './index.html',
-        title: 'JATE'
+        title: 'Webpack Plugin',
+        filename: './index.html'
       }),
       // Injects our custom service worker
       new InjectManifest({
         swSrc: './src-sw.js',
         swDest: 'src-sw.js',
+        exclude: [/\.map$/, /asset-manifest\.json$/],
       }),
       // Creates json file
       new WebpackPwaManifest({
@@ -57,17 +59,16 @@ module.exports = () => {
           use: ['style-loader', 'css-loader'],
         },
         {
+          test: /\.(png|svg|jpg|jpeg|gif)$/i,
+          type: 'asset/resource',
+        },
+        {
           test: /\.m?js$/,
-          exclude: /node_modules/,
-          // Use babel-loader in order to use ES6.
+          exclude: /(node_modules|bower_components)/,
           use: {
             loader: 'babel-loader',
             options: {
               presets: ['@babel/preset-env'],
-              plugins: [
-                '@babel/plugin-proposal-object-rest-spread',
-                '@babel/transform-runtime',
-              ],
             },
           },
         },

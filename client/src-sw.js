@@ -27,19 +27,21 @@ warmStrategyCache({
 registerRoute(({ request }) => request.mode === 'navigate', pageCache);
 
 registerRoute(
-  ({ request }) => ['style', 'script', 'worker'].includes(request.destination),
-  new StaleWhileRevalidate({
-    // Name of the cache storage.
+  ({ request }) => {
+    return request.destination === 'image' || request.destination === 'script' || request.destination === 'style' || request.destination === 'worker' ||
+        request.url.endsWith('.css') || request.url.endsWith('.js') || 
+        request.url.endsWith('.png') || request.url.endsWith('.jpg') || request.url.endsWith('.svg');
+},
+  new CacheFirst({
     cacheName: 'asset-cache',
     plugins: [
-      // This plugin will cache responses with these headers to a maximum-age of 30 days
       new CacheableResponsePlugin({
         statuses: [0, 200],
       }),
       new ExpirationPlugin({
         maxEntries: 60,
-        maxAgeSeconds: 30 * 24 * 60 * 60,
-      })
+        maxAgeSeconds: 30 * 24 * 60 * 60, // 30 Days
+      }),
     ],
   })
 );
